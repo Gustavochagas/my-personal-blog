@@ -1,46 +1,35 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './globalStyles';
-import { lightTheme, darkTheme } from './themes';
+import * as React from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./globalStyles";
+import { lightTheme, darkTheme } from "./themes";
+import { Container, Header, Main } from "./styles";
+import { Bio } from "./Bio";
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
-  const isRootPath = location.pathname === rootPath;
-
-  const [theme, setTheme] = React.useState('light');
+const Layout = ({ children }) => {
+  const [theme, setTheme] = React.useState("light");
   const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')}
-
-    
-  let header
-
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme} >
-      <GlobalStyles/>
-        <button onClick={themeToggler}>Switch Theme</button>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyles />
+      <Container>
+        <Header>
+          <Bio />
+        </Header>
+        <Main>
+          <button onClick={themeToggler}>Switch Theme</button>
+          {children}
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </footer>
+        </Main>
+      </Container>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
