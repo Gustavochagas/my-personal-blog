@@ -1,16 +1,21 @@
 {
-  "defaultSeverity": "error",
-  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
-  "jsRules": {},
-  "rules": {
-    "interface-name": false,
-    "semicolon": [true, "never"],
-    "member-access": [false],
-    "ordered-imports": [true],
-    "no-console": [false],
-    "no-var-requires": true,
-    "jsx-no-lambda": false,
-    "quotemark": [true, "single", "jsx-double"]
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es6", "dom", "dom.iterable"],
+    "esModuleInterop": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "src",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "typeRoots": ["./node_modules/@types", "./typings"]
   },
-  "rulesDirectory": []
+  "include": ["src/**/*.ts", "src/**/*.tsx", "./typings"],
+  "exclude": ["node_modules"]
 }
