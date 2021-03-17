@@ -1,16 +1,7 @@
 module.exports = {
-  siteMetadata: {
-    title: `My Personal Blog`,
-    author: {
-      name: `Gustavo Chagas`,
-      summary: `who lives in Brazil.`,
-    },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gustavochagas.gatsbyjs.io/`,
-  },
   plugins: [
-    `gatsby-plugin-image`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -81,8 +72,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -126,4 +117,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
