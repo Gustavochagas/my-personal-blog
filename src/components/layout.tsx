@@ -4,6 +4,7 @@ import { GlobalStyles } from "./globalStyles";
 import { lightTheme, darkTheme } from "./themes";
 import { Container, Header, Main } from "./styles";
 import { Bio } from "./Bio";
+import { Switch } from "./Switch";
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = React.useState("light");
@@ -16,10 +17,12 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Container>
         <Header>
-          <Bio />
+          <div>
+            <Bio />
+            <Switch onChange={themeToggler} label="Change theme" />
+          </div>
         </Header>
         <Main>
-          <button onClick={themeToggler}>Switch Theme</button>
           {children}
           <footer>
             © {new Date().getFullYear()}, Built with

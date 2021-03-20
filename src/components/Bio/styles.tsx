@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { Flex } from "../Flex";
 
-export const Content = styled(Flex)`
-  padding: 50px 20px;
-`;
-
 export const Image = styled.img`
   width: 100px;
   height: 100px;
@@ -31,4 +27,13 @@ export const SocialIcons = styled.a`
   background-color: #ccc;
   margin: 0 5px;
   transform: translateX(-5px);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    opacity: .7;
+  }
 `;

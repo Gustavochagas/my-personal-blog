@@ -1,22 +1,29 @@
 import * as React from "react";
-import { Content, Description, Image, SocialIcons, Title } from "./styles";
+import { AiFillGithub, AiFillLinkedin, AiFillMediumSquare } from 'react-icons/ai';
+import { Description, Image, SocialIcons, Title } from "./styles";
 
 import ProfileImage from "../../images/profile.png";
 import { Flex } from "../Flex";
 
 export const Bio = () => {
   return (
-    <Content flexDirection="column">
+    <Flex flexDirection="column" mb={20}>
       <Image src={ProfileImage} alt="" />
       <Title>Gustavo Chagas</Title>
       <Description>
         Software Enginner | Javascript, ReactJS & Typescrypt.
       </Description>
       <Flex mt={16}>
-        <SocialIcons href=" " />
-        <SocialIcons href=" " />
-        <SocialIcons href=" " />
+        <SocialIcons target="_blank" href="https://github.com/Gustavochagas">
+          <AiFillGithub />
+        </SocialIcons>
+        <SocialIcons target="_blank" href="https://www.linkedin.com/in/gustavochagass/">
+          <AiFillLinkedin />
+        </SocialIcons>
+        <SocialIcons target="_blank" href="https://medium.com/@gustavochagass">
+          <AiFillMediumSquare />
+        </SocialIcons>
       </Flex>
-    </Content>
+    </Flex>
   );
 };
