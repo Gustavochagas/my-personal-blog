@@ -1,8 +1,9 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import { Article } from "../components/Article";
+import { SEO } from "../components/SSO";
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -10,6 +11,7 @@ const BlogIndex = ({ data }) => {
   if (posts.length === 0) {
     return (
       <Layout>
+        <SEO title="All posts" />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -21,6 +23,7 @@ const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="All posts" />
       {posts.map((post, index) => (
         <Article post={post} key={index} />
       ))}
