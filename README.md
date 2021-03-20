@@ -1,6 +1,6 @@
 ## 🚀 My Personal Blog
 
-Personal blog based Gatsby's blog starter.
+Personal blog based Gatsby's blog starter
 
 
 1.  **Start developing.**
