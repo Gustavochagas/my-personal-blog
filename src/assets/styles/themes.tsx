@@ -3,9 +3,11 @@ export const fontSizes = {
   regular: '16px',
   large: '18px',
   largest: '24px',
+  big: '40px',
 };
 
 export const spaces = {
+  smaller: '4px',
   small: '12px',
   regular: '16px',
   large: '18px',
