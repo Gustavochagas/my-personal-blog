@@ -24,8 +24,8 @@ export const SocialIcons = styled.a`
   height: 30px;
   border-radius: 50%;
   background-color: ${(props) => props.theme.colors.gray};
-  margin: 0 5px;
-  transform: translateX(-5px);
+  margin: 0 ${(props) => props.theme.spaces.smaller};
+  transform: translateX(-${(props) => props.theme.spaces.smaller}x);
   color: ${(props) => props.theme.colors.black};
   display: flex;
   justify-content: center;
