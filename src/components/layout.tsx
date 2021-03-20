@@ -4,6 +4,7 @@ import { GlobalStyles } from "../assets/styles/globalStyles";
 import { lightTheme, darkTheme } from "../assets/styles/themes";
 import { Container, Main } from "./styles";
 import { Header } from "./Header";
+import { GitHubCorner } from "./GithubCorner";
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = React.useState("light");
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
           {children}
         </Main>
       </Container>
+      <GitHubCorner projectUrl="https://github.com/Gustavochagas/my-personal-blog" />
     </ThemeProvider>
   );
 };
