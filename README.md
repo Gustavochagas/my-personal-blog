@@ -5,8 +5,6 @@ Personal blog based Gatsby's blog starter.
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
-
     ```shell
     npm i
     npm run start
