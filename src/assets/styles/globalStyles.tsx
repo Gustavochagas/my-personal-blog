@@ -1,3 +1,5 @@
+import './fonts.css';
+
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
@@ -11,5 +13,6 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
   }
 `;
