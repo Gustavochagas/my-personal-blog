@@ -5,13 +5,25 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   margin: ${(props) => props.theme.spaces.large} 0;
-  padding: ${(props) => props.theme.spaces.largest};
 
   border: 1px solid rgba(79,93,117,.2);
   border-radius: 5px;
+
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    border: 1px solid rgba(79,93,117,1);
+  }
 `;
 
-export const Title = styled.a`
+export const Link = styled.a`
+ padding: ${(props) => props.theme.spaces.largest};
+ text-decoration: none;
+
+ color: black;
+`;
+
+export const Title = styled.h2`
   color: black;
   display: block;
   margin: ${(props) => props.theme.spaces.small} 0;
