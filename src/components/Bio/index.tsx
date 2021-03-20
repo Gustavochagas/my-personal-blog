@@ -2,7 +2,7 @@ import * as React from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillMediumSquare } from 'react-icons/ai';
 import { Description, Image, SocialIcons, Title } from "./styles";
 
-import ProfileImage from "../../images/profile.png";
+import ProfileImage from "../../assets/images/profile.png";
 import { Flex } from "../Flex";
 
 export const Bio = () => {

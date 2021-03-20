@@ -11,16 +11,6 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-`;
-
-export const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  width: 275px;
-  padding: 50px 20px;
-
-  > div {
-    position: sticky;
-    top: 20px;
-  }
+  flex: 1;
+  padding-left: 40px;
 `;

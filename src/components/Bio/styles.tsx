@@ -1,22 +1,21 @@
 import styled from "styled-components";
-import { Flex } from "../Flex";
 
 export const Image = styled.img`
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 16px;
+  margin-bottom: ${(props) => props.theme.spaces.regular};
 `;
 
 export const Title = styled.h2`
-  font-size: 18px;
+  font-size: ${(props) => props.theme.fontSizes.large};
   font-weight: bold;
   margin: 0;
 `;
 
 export const Description = styled.p`
-  font-size: 16px;
+  font-size: ${(props) => props.theme.fontSizes.regular};
   margin: 0;
 `;
 

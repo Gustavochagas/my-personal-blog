@@ -10,8 +10,8 @@ export const SwitchLabel = styled.label`
   padding: 0;
   user-select: none;
   flex: 1;
-  font-size: 16px;
-  margin-right: 16px;
+  font-size: ${(props) => props.theme.fontSizes.regular};
+  margin-right: ${(props) => props.theme.spaces.regular};
   white-space: nowrap;
   text-overflow: initial;
   overflow: initial;
