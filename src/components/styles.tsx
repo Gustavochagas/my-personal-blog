@@ -15,6 +15,12 @@ export const Main = styled.main`
 
 export const Header = styled.header`
   display: flex;
-  background-color: #fbfbfb;
+  flex-direction: column;
   width: 275px;
+  padding: 50px 20px;
+
+  > div {
+    position: sticky;
+    top: 20px;
+  }
 `;
