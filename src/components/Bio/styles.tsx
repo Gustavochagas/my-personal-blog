@@ -23,10 +23,10 @@ export const SocialIcons = styled.a`
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: ${(props) => props.theme.colors.gray};
   margin: 0 5px;
   transform: translateX(-5px);
-  color: black;
+  color: ${(props) => props.theme.colors.black};
   display: flex;
   justify-content: center;
   align-items: center;

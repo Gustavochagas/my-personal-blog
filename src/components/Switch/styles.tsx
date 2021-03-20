@@ -41,7 +41,7 @@ export const Span = styled.span<SpanProps>`
   left: 0;
   right: 0;
   bottom: 0;
-  border: solid 2px rgba(79, 93, 117, ${({ active }) => active  ? '1' : '.2'});
+  border: 2px solid ${(props) => props.active ? props.theme.colors.gray : props.theme.colors.black};
   transition-property: all;
   border-radius: 20px;
 
@@ -53,7 +53,7 @@ export const Span = styled.span<SpanProps>`
     left: 2px;
     right: auto;
     bottom: 2px;
-    background-color: rgba(79, 93, 117, ${({ active }) => active  ? '1' : '.2'});
+    background-color: ${(props) => props.active ? props.theme.colors.gray : props.theme.colors.black};
     transition: all .1s ease-in-out;
     transition-property: all;
     border-radius: 50%;

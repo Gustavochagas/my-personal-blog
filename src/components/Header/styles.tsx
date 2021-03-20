@@ -5,7 +5,7 @@ export const Container = styled.header`
   flex-direction: column;
   width: 275px;
   padding: 50px 20px;
-  border-right: 1px solid rgba(79,93,117,.2);
+  border-right: 1px solid ${(props) => props.theme.colors.gray};
 
   > div {
     position: sticky;
