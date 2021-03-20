@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, DateIcon, DatePublished, Link, Title } from './styles';
+import { Archor, Container, DateIcon, DatePublished, Title } from './styles';
 
 type PostType = {
   fields: {
@@ -22,7 +22,7 @@ export const Article = ({ post }: PropTipes) => {
 
   return (
     <Container>
-      <Link href={post.fields.slug}>
+      <Archor to={post.fields.slug}>
         <header>
           <DatePublished>
             <DateIcon />
@@ -36,7 +36,7 @@ export const Article = ({ post }: PropTipes) => {
           }}
           itemProp="description"
         />
-      </Link>
+      </Archor>
       </Container>
   )
 }

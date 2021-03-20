@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { AiOutlineCalendar } from 'react-icons/ai';
 
@@ -7,7 +8,7 @@ export const Container = styled.article`
   margin: ${(props) => props.theme.spaces.large} 0;
 
   border: 1px solid ${(props) => props.theme.colors.gray};
-  border-radius: 5px;
+  border-radius: ${(props) => props.theme.spaces.smaller};
 
   transition: all .2s ease-in-out;
 
@@ -16,7 +17,7 @@ export const Container = styled.article`
   }
 `;
 
-export const Link = styled.a`
+export const Archor = styled(Link)`
  padding: ${(props) => props.theme.spaces.largest};
  text-decoration: none;
 
@@ -42,8 +43,10 @@ export const DatePublished = styled.span`
   font-size: ${(props) => props.theme.fontSizes.small};
   font-weight: bold;
   color: ${(props) => props.theme.colors.grayDark};
+  display: flex;
+  align-items: center;
 `;
 
 export const DateIcon = styled(AiOutlineCalendar)`
-  margin-right: 5px;
+  margin-right: ${(props) => props.theme.spaces.smaller};
 `;
