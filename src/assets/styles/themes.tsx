@@ -12,12 +12,20 @@ export const spaces = {
   largest: '24px',
 }
 
+export const colors = {
+  gray: '#e0e0e0',
+  grayLight: '#4f5d75',
+  grayDark: '#777777',
+  black: '#3e3e3e',
+}
+
 export const lightTheme = {
   body: "#FAFAFA",
   text: "#363537",
 
   fontSizes: fontSizes,
   spaces: spaces,
+  colors: colors,
 };
 
 export const darkTheme = {
@@ -26,4 +34,5 @@ export const darkTheme = {
 
   fontSizes: fontSizes,
   spaces: spaces,
+  colors: colors,
 };
