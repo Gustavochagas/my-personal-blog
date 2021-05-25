@@ -11,7 +11,7 @@ export const Bio = () => {
       <Image src={ProfileImage} alt="" />
       <Title>Gustavo Chagas</Title>
       <Description>
-        Software Enginner | Javascript, ReactJS & Typescrypt.
+        Software Engineer | Javascript, ReactJS & Typescrypt.
       </Description>
       <Flex mt={16}>
         <SocialIcons target="_blank" href="https://github.com/Gustavochagas">
